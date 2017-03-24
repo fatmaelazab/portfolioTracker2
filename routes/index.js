@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 var projectController = require('../controller/projectController');
-let Project = require('../models/project');
+var Project = require('../models/project');
 var portfolioController = require('../controller/portfolioController');
 var multer=require('multer');
 var upload=multer({dest: 'uploads/' })
