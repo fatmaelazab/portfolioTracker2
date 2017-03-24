@@ -9,7 +9,7 @@ var upload=multer({dest: 'uploads/' })
 var Student = require('../models/students');
 
 router.post('/profile',upload.any(),function(req,res,next){
- let newStudent=new Student(req.body);
+ var newStudent=new Student(req.body);
 	if(req.files){
 		req.files.forEach(function(file){
 			newStudent.image="uploads/"+file.filename;
