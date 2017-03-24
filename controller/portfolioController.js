@@ -1,9 +1,9 @@
-let Portfolio = require('../models/portfolio');
+var Portfolio = require('../models/portfolio');
 
 var multer=require('multer');
 var upload=multer({dest: 'uploads/' })
 
-let portfolioController = {
+var portfolioController = {
 
     getAllPortfolios:function(req, res){
 
@@ -17,7 +17,7 @@ let portfolioController = {
     },
 
     createPortfolio:function(req, res){
-        let portfolio = new Portfolio(req.body);
+        var portfolio = new Portfolio(req.body);
         portfolio.name=req.body.name;
         //portfolio.username=req.body.username;
         portfolio.title=req.body.title;
