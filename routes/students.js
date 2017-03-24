@@ -21,7 +21,7 @@ router.get('/profile',function(req,res) {
 	res.render('profile');
 });
 router.post('/profile',upload.any(),function(req,res) {
-	let student=new Student(req.body);
+	var student=new Student(req.body);
 	if(req.files){
 		 req.files.forEach(function(file){
 		student.image="uploads"+file.filename;
