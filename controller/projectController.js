@@ -1,9 +1,9 @@
-let Project = require('../models/project');
+var Project = require('../models/project');
 
 var multer=require('multer');
 var upload=multer({dest: 'uploads/' })
 
-let projectController = {
+var projectController = {
 
     getAllProjects:function(req, res){
 
@@ -17,7 +17,7 @@ let projectController = {
     },
 
     createProject:function(req, res){
-        let project = new Project(req.body);
+        var project = new Project(req.body);
         //req.flash('error_msg','Please Add at least one project');
         upload.any();
         // console.log('llllllllllllllllllllllllllllllllll');
